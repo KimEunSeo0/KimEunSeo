@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D효과</title>
+    <style>
+        *{padding:0;margin:0;}
+        #box{width:400px;height:500px;margin:50px auto;
+        border:1px solid #ccc;}
+
+        #box .inner{position:relative;
+            width:100%;height:100%;
+            background:url(ani_img/bg.jpg) no-repeat center/cover;
+            transform-style:preserve-3d;}
+
+        #box .inner h1{position:absolute; top:50%;left:50%;
+        font-size:34px;
+        color:#fff;
+        transform:translateX(-80%) translateY(-80%) translateZ(50px);}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="inner" data-tilt>
+            <h1>
+                preserve-3d<br>
+                translateZ
+            </h1>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+    <!-- script를 바로 위에 써줘야 읽히지 않는 오류를 최소화할 수 있다. -->
+    <script>
+        $(".inner").tilt({
+            glare:true,
+            maxGlare:.5,
+            scale:1.1
+        });
+    </script>
+</body>
+</html>

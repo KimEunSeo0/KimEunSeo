@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 - 여러모션을 이어 움직히는것처럼</title>
+    <style>
+        .monster {
+            width: 74px;
+            height: 93px;
+            overflow: hidden;
+            margin: 50px auto;
+            background:url(ani_img/monster.png) no-repeat left top;
+            animation:ani 0.8s steps(10) infinite;
+        }
+        
+        @keyframes ani {
+            0% {background-position:0;}
+            100% {background-position:-740px;} /* 74px X 10 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="monster"></div>
+</body>
+
+</html>

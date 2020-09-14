@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 rotate</title>
+    <!-- rotate는 회전하는 것. 값뒤에 deg("각도")라는 단위를 꼭 써줘야함 -->
+    <style>
+        #origin {
+            width: 300px;
+            height: 170px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 40px;
+            overflow: hidden;
+        }
+
+        #origin>div {
+            transition: all 1s;
+        }
+        /* ㄴ>360도로 돌리면 원위치이기때문에 transition을 넣어 과정을 보여주면 효과적. */
+
+        #origin img {
+            width: 100%;
+        }
+
+        .rotate1 {
+            transform-origin: right bottom; /* 회전하는 중심점을 바꿔주는 태그값 */
+        }
+        .rotate2 {
+            transform-origin: left bottom;
+        }
+
+        .rotate1:hover {transform: rotate(360deg);}/* 기본 시계방향 */
+        .rotate2:hover {transform: rotate(-180deg);}
+    </style>
+</head>
+
+<body>
+    <div id="origin">
+        <div class="rotate1"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="rotate2"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>

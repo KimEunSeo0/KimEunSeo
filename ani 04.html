@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 rotate3d효과</title>
+    <!-- rotate3d효과보기 -->
+    <style>
+        #origin {
+            width: 300px;
+            height: 170px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 40px;
+            overflow: hidden;
+            perspective:200px; /* 입체감을 주기 위해 넣는값. 부모요소에 넣어줘야함 */
+        }
+
+        #origin>div {transition: all 1s;}
+
+        #origin img {width: 100%;}
+
+
+        .rotateX:hover {transform: rotateX(45deg);}/* 기본 시계방향 */
+        .rotateY:hover {transform: rotateY(45deg);}
+        .rotateZ:hover {transform: rotateZ(45deg);}
+        .rotate3d:hover {transform: rotate3d(2.5, 1.2, -1.5, 45deg);}
+    </style>
+</head>
+
+<body>
+    <div id="origin">
+        <div class="rotateX"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="rotateY"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="rotateZ"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="rotate3d"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>

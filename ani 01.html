@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 transform</title> <!-- transform은 위치가 변함. 값을 px값으로 써줌 -->
+    <style>
+        #origin {
+            width: 300px;
+            height: 170px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 40px;
+            overflow:hidden;
+        }
+        #origin>div{transition: all 1s;}
+        #origin img{width:100%;}
+        .translateX:hover{transform:translateX(100px);}
+        .translateY:hover{transform:translateY(100px);}
+        .translate:hover{transform:translate(100px, 50px);}
+    </style>
+</head>
+
+<body>
+    <div id="origin">
+        <div class="translateX"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="translateY"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="translate"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>

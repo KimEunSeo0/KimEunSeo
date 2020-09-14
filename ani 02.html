@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 scale</title> <!-- scale은 사이즈가 변하는것. 값을 숫자로만 써주면됨 -->
+    <style>
+        #origin {
+            width: 300px;
+            height: 170px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 40px;
+            overflow:hidden;
+        }
+        #origin>div{transition: all 1s;}
+        #origin img{width:100%;}
+        .scaleX:hover{transform:scaleX(2);}
+        .scaleY:hover{transform:scaleY(1.5);}
+        .scale:hover{transform:scale(0.5);}
+    </style>
+</head>
+
+<body>
+    <div id="origin">
+        <div class="scaleX"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="scaleY"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+    <div id="origin">
+        <div class="scale"><img src="ani_img/test_b01.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
